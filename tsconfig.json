@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    // dont complain about esm syntax
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    // typecheck JS files
+    "checkJs": true,
+    // whatever libs we are using in this particular app
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "WebWorker"],
+    "moduleResolution": "node",
+    // dont compile, just typecheck
+    "noEmit": true,
+    "rootDir": "./src",
+    "strict": true,
+    // look at imported library types and our own project declaration files
+    "typeRoots": ["./src/@types/", "./node_modules/@types"]
+  },
+
+  // only typecheck JS files
+  "include": ["./src/**/*.js"],
+  "exclude": ["node_modules"]
+}
